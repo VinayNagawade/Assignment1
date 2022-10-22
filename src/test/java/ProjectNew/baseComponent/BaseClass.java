@@ -42,7 +42,7 @@ public class BaseClass {
 		}
 		else if(browserName.contains("firefox")) {
 			
-			System.setProperty("webdriver.gecko.driver","C:\\Users\\Vinay\\Downloads\\geckodriver-v0.31.0-win64\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver",path+"\\src\\main\\java\\vinay\\resources\\geckodriver.exe");
 			 driver = new FirefoxDriver();
 		}
 		else if(browserName.contains("edge")) {
@@ -64,7 +64,7 @@ public class BaseClass {
 	
 	@AfterMethod(alwaysRun=true)
 	public void tearDown() {
-		//driver.close();
+		driver.close();
 	}
 
     public String getScreenShot(String testCaseName, WebDriver driver) throws IOException {

@@ -14,15 +14,12 @@ import ProjectNew.baseComponent.Retry;
 
 public class StandAloneTest extends BaseClass {
 
-	@Test(retryAnalyzer=Retry.class)
-	public  void abc() throws IOException, InterruptedException {
-	}
-	 
+	
 	 
 	@Test(retryAnalyzer=Retry.class)
 	public  void cheakBorrowIstimate() throws IOException, InterruptedException {
 		
-		
+		landingPage = launchApplication();  
 		landingPage.applicationType("singal");
 		WebElement select =landingPage.selectNoOfDependant();
 		Select s = new Select(select);
